@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Alpine js tests</title>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+  <div x-data="{ title: 'Welcome to Alpine!' }">
+    <h1 x-text="title"></h1>
+    <span x-text="1 + 2"></span>
+  </div>
+  <div x-data="{ open: false }">
+    <button @click="open = ! open">Expanddasdadasda</button>
+ 
+    <div x-show="open">
+      Content...
+    </div>
+  </div>
+  <div x-data="{ open: false }">
+    <button @click="open = ! open">Expand</button>
+ 
+    <template x-if="open">
+        <div>
+            Content...
+        </div>
+    </template>
+  </div>
+
+  <button
+    x-data="{ red: false }"
+    x-bind:class="red ? 'bg-red' : ''"
+    @click="red = ! red"
+  >
+    Toggle Red
+  </button>
+</body>
+</html>
