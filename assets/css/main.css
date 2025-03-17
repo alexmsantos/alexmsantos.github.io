@@ -6,6 +6,10 @@ body {
   background-color: green;
 }
 
+.content {
+  background-color: tomato;
+}
+
 footer {
   background-color: purple;
 }
