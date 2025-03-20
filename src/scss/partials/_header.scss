@@ -1,3 +1,27 @@
 header {
   background-color: yellow;
 }
+/*
+.btn {
+  font-size: 40px;
+  border: 1px solid black;
+  border-radius: 100px;
+  padding: 10px 20px;
+}
+
+.btn-2 {
+  font-size: 70px;
+  @extend .btn;
+  background-color: tomato;
+}
+*/
+
+.btn-2 {
+  @include example(#ff0000);
+  font-size: rem(100);
+}
+
+.moon {
+  width: 300px;
+  height: 300px;
+}
